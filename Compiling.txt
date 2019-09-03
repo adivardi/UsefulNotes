@@ -1,0 +1,16 @@
+4. Compile c++:
+  g++ filename.cpp (-o executablename)
+  ./executablename
+
+  - To add thresing option, add -std=c++0x -pthread
+  - gcc for c
+  - flag -c : only compile to object file, without linking
+  - flag -Ipath :  path to include file
+  - flag -Lpath :  path to library directory
+  - flag -lpath :  path to compiled library (.so, .a file)
+  - flag -g : turn on debugging
+
+5. compile c++ with CMake
+  cmake .
+  make
+  ./executablename

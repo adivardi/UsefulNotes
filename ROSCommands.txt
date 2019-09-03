@@ -1,0 +1,2 @@
+1. Record pintcloud to .pcd file:
+  rosrun pcl_ros pointcloud_to_pcd input:=/camera/depth_registered/points _binary:=true

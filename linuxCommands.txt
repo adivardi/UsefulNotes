@@ -1,0 +1,21 @@
+1. Bind USB in Linux:
+  check infomation: udevadm info -a -p $(udevadm info -q path -n <devpath>)
+  inserting a <devpath> such as /dev/ttyUSB0
+
+  find a kernels in the list and remember it.
+
+  edit 99-name.rules in /etc/udev/rules.d like this and change the kernels
+  SUBSYSTEMS=="usb",KERNELS=="1-8", ACTION=="add", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", MODE="666", SYMLINK+="usb_mobile_base", GROUP:="dialout"
+
+  get already bounded usb link: ls -l /dev/usb* ( usb* is linked to ttyUSB*,get info of which ttyUSB* it is )
+
+2.  pkg-config --modversion "package"   --------- get package version
+               --libs       "package"   --------- get package linking libs
+               --cflags     "package" --------- get package include flags
+
+3.  grep -rnw "directory" -e "pattern" --------- search code in directory
+    -r :is recurcive
+    -n :show line number
+    -w :whole word
+    -l :search certain file to match
+
