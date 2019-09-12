@@ -11,11 +11,17 @@
 
 2.  pkg-config --modversion "package"   --------- get package version
                --libs       "package"   --------- get package linking libs
-               --cflags     "package" --------- get package include flags
+               --cflags     "package"   --------- get package include flags
 
-3.  grep -rnw "directory" -e "pattern" --------- search code in directory
+3.  grep -rnw "directory" -e "pattern"  --------- search code in directory
     -r :is recurcive
     -n :show line number
     -w :whole word
     -l :search certain file to match
 
+4. Run command for many files from terminal or bash:
+    for i in $(ls); do ___cmd___ $i; done
+
+    e.g.
+        for i in $(ls); do echo $i; done
+        for i in $(ls); do ./main $i; done
