@@ -1,0 +1,27 @@
+set -g mouse on
+
+# pane movement shortcuts (same as vim)
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+#session1
+new -s four -n WindowName Command
+splitw -v -p 50 -t 0 bar
+selectw -t 1
+selectp -t 0
+
+set-window-option -g window-status-current-bg yellow
+
+bind C-f source-file ~/.tmux/four_panes
+bind C-s source-file ~/.tmux/six_panes
+
+# More straight forward key bindings for splitting
+#unbind %
+bind | split-window -h -c "#{pane_current_path}"
+bind h split-window -h -c "#{pane_current_path}"
+#unbind '"'
+bind - split-window -v -c "#{pane_current_path}"
+bind v split-window -v -c "#{pane_current_path}"
+

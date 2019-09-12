@@ -1,0 +1,38 @@
+prefix: ctrl-b
+
+Shortcuts:
+c               ---    new window
+w               ---    list windows
+n               ---    next window
+p               ---    prev window
+
+% (shift+5)     ---    vertical split
+" (shift+')     ---    horizontal split
+' ' (space)     ---    toggle layouts
+
+o               ---    swap panes
+x               ---    xill pane
+q               ---    show pane number
+z               ---    toggle pane zoom
+{               ---    next pane
+}               ---    prev pane
+
+:               ---    tmux command
+?               ---    help
+
+
+Commands:
+setw synchronize=panes (off/on)               ---    sync all panes
+set -g mouse on               ---    enable mouse (use shift to select)
+bind __key__ __command__               ---    bid a key to command
+selectp -t __number__               ---    select pane no. __
+splitw -h/-v -p __precentage__               ---    split pane
+
+Conf file:
+Put file in home/ and rename to .tmux.conf
+
+Scripts:
+- Create new file in ~/.tmux/
+- Fill file with tmux commands
+- In .tmux.conf, put
+    bind __key__ source-file ~/.tmux/__script__

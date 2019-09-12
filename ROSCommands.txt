@@ -1,2 +1,20 @@
 1. Record pintcloud to .pcd file:
   rosrun pcl_ros pointcloud_to_pcd input:=/camera/depth_registered/points _binary:=true
+
+___Useful commands___
+rosnode info [topic]
+
+rostopic list
+rostopic echo [topic]
+rostopic info [topic]
+rostopic type [topic]
+rostopic pub  [topic] [msg_type] [agrs]
+
+rosrun rqt_plot rqt_plot
+rosrun rqt_graph rqt_graph
+rosrun rqt_reconfigure rqt_reconfigure
+
+rosrun rqt_tf rqt_tf
+rosrun tf view_frame    ---     save tf tree to file
+rosrun tf tf_echo [ref_frame] [target_frame]
+rosrun tf tf_monitor
