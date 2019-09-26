@@ -1,10 +1,13 @@
 1. Bind USB in Linux:
-  check infomation: udevadm info -a -p $(udevadm info -q path -n <devpath>)
+  Find the device that needs to be used in /dev/XXX. If USB, it would probably be ttyUSBX. If serial, ttyX. The easiest way to recognize the device is to unplug and the plug it and see which new one shows up.
+  
+  check device infomation: udevadm info -a -p $(udevadm info -q path -n <devpath>)
   inserting a <devpath> such as /dev/ttyUSB0
 
-  find a kernels in the list and remember it.
+  find information in the list: kernels, idVendor, idProduct. Choose a simlink name
 
-  edit 99-name.rules in /etc/udev/rules.d like this and change the kernels
+  edit 99-name.rules in /etc/udev/rules.d like this and change the information.
+  Example:
   SUBSYSTEMS=="usb",KERNELS=="1-8", ACTION=="add", ATTRS{idVendor}=="067b", ATTRS{idProduct}=="2303", MODE="666", SYMLINK+="usb_mobile_base", GROUP:="dialout"
 
   get already bounded usb link: ls -l /dev/usb* ( usb* is linked to ttyUSB*,get info of which ttyUSB* it is )
