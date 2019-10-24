@@ -1,3 +1,6 @@
+https://gist.github.com/MohamedAlaa/2961058
+https://lukaszwrobel.pl/blog/tmux-tutorial-split-terminal-windows-easily/
+
 prefix: ctrl-b
 
 Shortcuts:
@@ -36,3 +39,6 @@ Scripts:
 - Fill file with tmux commands
 - In .tmux.conf, put
     bind __key__ source-file ~/.tmux/__script__
+
+Links:
+http://hyperpolyglot.org/multiplexers

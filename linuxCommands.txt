@@ -1,6 +1,6 @@
 1. Bind USB in Linux:
   Find the device that needs to be used in /dev/XXX. If USB, it would probably be ttyUSBX. If serial, ttyX. The easiest way to recognize the device is to unplug and the plug it and see which new one shows up.
-  
+
   check device infomation: udevadm info -a -p $(udevadm info -q path -n <devpath>)
   inserting a <devpath> such as /dev/ttyUSB0
 
@@ -28,3 +28,8 @@
     e.g.
         for i in $(ls); do echo $i; done
         for i in $(ls); do ./main $i; done
+
+lsblk: Shows the connected disks with their names and mountpoints (= folders). If MOUNTPOINT is empty, the device is either partitioned or not mounted.
+sudo blkid /dev/sdX: shows the details about the devices sdX
+umount MOUNTPOINT: Unmount the device.
+sudo udisksctl power-off --block-device /dev/sdX: Turn off the device sdX
