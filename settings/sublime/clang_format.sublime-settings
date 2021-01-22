@@ -1,0 +1,4 @@
+{
+	"binary": "/usr/bin/clang-format-8",
+	"style": "Google"
+}

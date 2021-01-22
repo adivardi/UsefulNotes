@@ -1,0 +1,19 @@
+alias sbrc="source ~/.bashrc"
+
+alias c="code"
+alias cc="code ."
+
+alias plz="sudo"
+
+# checks for any files flagged w/ --skip-worktree alias
+alias gitcheckskipped="git ls-files -v|grep '^S'"
+# add --skip-worktree flag to file
+gitskip() {  git update-index --skip-worktree "$@";  git status; }
+# remove --skip-worktree flag from file
+gitunskip() {  git update-index --no-skip-worktree "$@";  git status; }
+
+alias gzcheck="ps -ef | grep gz"
+alias gzkill="killall gzserver"
+
+alias clang_folder_dry="find . -iname *.h -o -iname *.cpp | xargs clang-format-10 --style=file --dry-run"
+

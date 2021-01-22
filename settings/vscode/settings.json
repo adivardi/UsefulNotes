@@ -1,0 +1,239 @@
+{
+    // -------------- General Settings --------------
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "onFocusChange",
+    "editor.rulers": [
+        120
+    ],
+    "window.zoomLevel": 0,
+    "C_Cpp.updateChannel": "Insiders",
+    "files.insertFinalNewline": true,
+    "editor.emptySelectionClipboard": false,
+    "files.defaultLanguage": "{activeEditorLanguage}",
+    "editor.columnSelection": false,
+    // -------------- Reduce Computation--------------
+    "telemetry.enableTelemetry": false,
+    "telemetry.enableCrashReporter": false,
+    "search.exclude": {
+        "\"**/env\": true": true,
+        "\"**/venv\": true": true
+    },
+    "files.watcherExclude": {
+        "\"**/env/**\": true": true,
+        "\"**/venv/**\": true": true,
+        "\"env-*\": true": true
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/.vscode": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/node_modules": true,
+        "venv": true,
+        "*.sublime-*": true,
+        "env*": true
+    },
+    // -------------- Highlights --------------
+    "todohighlight.isEnable": true,
+    "todohighlight.isCaseSensitive": true,
+    "todohighlight.keywords": [
+        {
+            "text": "NOTE",
+            "color": "#ff0000",
+            "backgroundColor": "yellow",
+            "overviewRulerColor": "grey"
+        },
+        {
+            "text": "HACK",
+            "color": "#000",
+            "isWholeLine": false,
+        },
+        {
+            "text": "TODO",
+            "color": "black",
+            // "border": "1px solid red",
+            // "borderRadius": "2px", //NOTE using borderRadius along with `border` or you will see nothing change
+            "backgroundColor": "#FF8932"
+        },
+        {
+            "text": "TEST",
+            "color": "black",
+            "backgroundColor": "#E66BF4"
+        }
+    ],
+    "todohighlight.include": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.html",
+        "**/*.php",
+        "**/*.css",
+        "**/*.scss"
+    ],
+    "todohighlight.exclude": [
+        "**/node_modules/**",
+        "**/bower_components/**",
+        "**/dist/**",
+        "**/build/**",
+        "**/.vscode/**",
+        "**/.github/**",
+        "**/_output/**",
+        "**/*.min.*",
+        "**/*.map",
+        "**/.next/**"
+    ],
+    "todohighlight.maxFilesForSearch": 5120,
+    "todohighlight.toggleURI": false,
+    // -------------- Spell Checker --------------
+    "cSpell.userWords": [
+        "Bezier",
+        "Eigen",
+        "Ffmpeg",
+        "Mqtt",
+        "Odometry",
+        "Paravan",
+        "RGBA",
+        "Roslaunch",
+        "ackermann",
+        "autec",
+        "bpearl",
+        "casadi",
+        "cetran",
+        "coeffs",
+        "deadband",
+        "deque",
+        "discretize",
+        "enway",
+        "fabs",
+        "hypot",
+        "msgs",
+        "nodelet",
+        "nodelets",
+        "numpy",
+        "opmode",
+        "psutil",
+        "reconf",
+        "rospkg",
+        "rospy",
+        "rviz",
+        "smach",
+        "srvs",
+        "strftime",
+        "teleop",
+        "unregister",
+        "urdf",
+        "waypoint",
+        "waypoints"
+    ],
+    // -------------- Python --------------
+    // set as python 2
+    "python.linting.enabled": true,
+    "python.pythonPath": "/usr/bin/python",
+    "python.autoComplete.extraPaths": [
+        "/opt/enway/ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/opt/enway/ws/src/cleansquare_ros/utils/scripts/",
+        "/opt/enway/ws/src/cleansquare_ros/enway_states/src",
+        "/opt/enway/tools_ws/devel/lib/python2.7/dist-packages",
+        "/opt/enway/ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages",
+        "/opt/enway/ws/src/cleansquare_ros/utils/scripts",
+        "/usr/lib/python2.7",
+        "/usr/lib/python2.7/plat-x86_64-linux-gnu",
+        "/usr/lib/python2.7/lib-tk",
+        "/usr/lib/python2.7/lib-old",
+        "/usr/lib/python2.7/lib-dynload",
+        "/home/adi/.local/lib/python2.7/site-packages",
+        "/usr/local/lib/python2.7/dist-packages",
+        "/usr/lib/python2.7/dist-packages",
+        "/usr/lib/python2.7/dist-packages/gtk-2.0",
+        "/usr/lib/python2.7/dist-packages/wx-3.0-gtk3"
+    ],
+    "python.analysis.logLevel": "Warning",
+    "python.linting.pylintEnabled": false,
+    // "python.linting.pylintUseMinimalCheckers": true,
+    "python.linting.pylintArgs": [
+        "--max-line-length=120",
+        "--disable=all",
+        "--enable=F,E,unreachable,duplicate-key,unnecessary-semicolon,global-variable-not-assigned,unused-variable,binary-op-exception,bad-format-string,anomalous-backslash-in-string,bad-open-mode",
+        "--disable=print-statement"
+    ],
+    // ** flake9 doesn't work for some reason
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120"
+    ],
+    "python.formatting.autopep8Args": [
+        "--max-line-length",
+        "120"
+    ],
+    "python.linting.mypyEnabled": false, // needs python3 set as interpreter
+    "python.linting.mypyArgs": [
+        "--ignore-missing-imports",
+        "--follow-imports=silent",
+        "--show-column-numbers",
+        "--strict"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+    // -------------- C++ --------------
+    "C_Cpp.loggingLevel": "Information",
+    "C_Cpp.default.includePath": [
+        "${default}",
+        "${workspaceFolder}/**",
+        "${workspaceFolder}/include",
+        "/usr/local/include",
+        "/opt/enway/ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/opt/enway/ws/src/cleansquare_ros/**",
+        "/usr/include/**",
+        "/usr/include/linux",
+        "/usr/include/eigen3",
+        "/usr/include/pcl-1.8",
+        "/usr/include/vtk-6.3",
+        "/usr/include/opencv"
+    ],
+    "C_Cpp.default.defines": [],
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc",
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.intelliSenseCachePath": "~/.vscode-cpptools",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.intelliSenseCacheSize": 14800,
+    // C_Cpp.default.macFrameworkPath                     : string[]
+    // C_Cpp.default.forcedInclude                        : string[]
+    // C_Cpp.default.browse.path                          : string[]
+    // C_Cpp.default.browse.databaseFilename              : string
+    // C_Cpp.default.browse.limitSymbolsToIncludedHeaders : boolean
+    "C_Cpp.errorSquiggles": "Enabled",
+    // ------- Formatter ------
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format-10",
+    "C_Cpp.clang_format_style": "file",
+    "C_Cpp.clang_format_fallbackStyle": "none",
+    "workbench.statusBar.visible": true,
+    "editor.tabSize": 2,
+    "workbench.list.smoothScrolling": true,
+    "cpplint.lineLength": 120,
+    "cpplint.lintMode": "workspace",
+    "extensions.ignoreRecommendations": false,
+    "workbench.iconTheme": "vscode-icons",
+    "editor.formatOnSaveMode": "modifications",
+    "cSpell.enableFiletypes": [
+        "rst"
+    ],
+    "editor.formatOnSave": true,
+    // "[cpp]": {
+    //     "editor.defaultFormatter": "xaver.clang-format"
+    // },
+    // "clang-format.executable": "/usr/bin/clang-format-8",
+    // "clang-format.style": "file",
+    // "clang-format.fallbackStyle": "none",
+}
+
