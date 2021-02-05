@@ -201,7 +201,7 @@
     "C_Cpp.default.cppStandard": "c++17",
     "C_Cpp.default.compilerPath": "/usr/bin/gcc",
     "C_Cpp.default.intelliSenseMode": "gcc-x64",
-    "C_Cpp.intelliSenseCachePath": "~/.vscode-cpptools",
+    "C_Cpp.intelliSenseCachePath": "/home/adi/.cache/.vscode-cpptools",
     "C_Cpp.intelliSenseEngine": "Default",
     "C_Cpp.intelliSenseCacheSize": 14800,
     // C_Cpp.default.macFrameworkPath                     : string[]
@@ -229,6 +229,8 @@
         "rst"
     ],
     "editor.formatOnSave": true,
+    "workbench.editor.wrapTabs": true,
+    "workbench.editor.decorations.badges": true,
     // "[cpp]": {
     //     "editor.defaultFormatter": "xaver.clang-format"
     // },
