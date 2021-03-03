@@ -1,0 +1,24 @@
+___Commands:___
+sudo !!     ---   repeat the last command but with sudo before
+
+show text files:
+tail -f -n N file       ---   show the last N lines of file and update when files updating
+less +F                 ---   same as `less` but start at the end of file.
+    ctrl + c            ---   detach from end of file and can scroll up
+
+___Shortcuts:___
+ctrl + a            ---   jump to the beginning of the line
+ctrl + e            ---   jump to the end of the line
+
+ctrl + x + e        ---   go into buffer where can write bash command on multiple lines (use default text editor from $EDITOR)
+
+ctrl + k  (kill)    ---   cut the text in the line from curser to the end of the line
+ctrl + u            ---   cut the text in the line from curser to the beginning of the line
+ctrl + w            ---   cut one word backwards (towards the beginning of the line) (space-delimited words)
+
+ctrl + y            ---   paste the cut text
+
+alt + .             ---   paste the argument from the last successful command
+
+
+https://www.youtube.com/watch?v=V8EUdia_kOE&feature=youtu.be&ab_channel=tutoriaLinux
